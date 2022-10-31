@@ -68,7 +68,7 @@ header {
 }
 
 
-.checkout-output-item-text::after {
+.checkout-container-item-text::after {
     content: ":";
 }
 
@@ -84,8 +84,6 @@ main {
     grid-area: items-container;
     background-color: #EDE1D5;
     border-radius: 10px;
-
-    ;
 }
 
 
@@ -149,17 +147,44 @@ body>main>form>ul>li {
 
 }
 
+.input-group {
+    position: relative;
+    display: inline-block;
+}
+
+.input {
+    background-color: rgba(0, 0, 0, 0);
+    border: 2px #885a2d solid;
+    padding: 8px;
+    border-radius: 100px;
+    width: 100%;
+}
+
+.label {
+    background-color: #eee1d5;
+    color: #885a2d;
+    font-size: 11px;
+    position: absolute;
+    left: 25px;
+    top: -7px;
+    padding: 0 2px;
+}
+
 .checkout-container {
     grid-area: checkout-container;
-    text-align: center;
     margin: 1vh 50vh 0 50vh;
     padding: 5px 0;
-    display: flex;
-    flex-direction: row;
-
-
-
 }
+
+.checkout-container-item-text {
+    text-align: left;
+    min-width: 200px;
+}
+
+.checkout-container-item-quantity {
+    text-align: right;
+}
+
 
 .place-order {
     grid-area: place-order;
@@ -169,6 +194,4 @@ body>main>form>ul>li {
     margin: 0 20%;
     padding: 10px 0 10px 0;
     height: 8vh;
-
-
 }
