@@ -15,11 +15,20 @@ object {
     max-height: 100%;
 }
 
+/* css Variables */
+
+:root {
+    --container-bg-color: #EDE1D5;
+    --box-bg-color: #EEE1D5;
+}
+
+
 body {
     margin: 0;
     padding: 0;
     background-color: #EFF0F0;
     font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
 }
 
 /* Grid Layouts */
@@ -43,6 +52,8 @@ body {
         "checkout-container   checkout-container";
     grid-template-rows: 1fr 4fr 1fr;
     margin: 0 auto;
+    width: 95%;
+    height: 80%;
 }
 
 header {
@@ -54,7 +65,7 @@ header {
     border: none;
     text-align: center;
     font-weight: normal;
-    font-size: 16px;
+    font-size: 15px;
     color: #EFE5B7;
     height: 10vh;
     padding: 10px 0 10px 0;
@@ -62,14 +73,9 @@ header {
 }
 
 .logo {
-    height: 25px;
+    height: 15px;
     position: relative;
-    top: 3px;
-}
-
-
-.checkout-container-item-text::after {
-    content: ":";
+    top: 10px;
 }
 
 main {
@@ -80,38 +86,29 @@ main {
     column-gap: 20px;
 }
 
-.items-container {
-    grid-area: items-container;
-    background-color: #EDE1D5;
-    border-radius: 10px;
-}
-
-
 /* Direct Child Syntax */
 body>main>form>ul>li {
     display: flex;
 }
 
 .box {
-    background-color: #eee1d5;
+    background-color: var(--box-bg-color);
     border-radius: 5px;
     box-shadow: 0 1px 3px rgb(0 0 0 / 0.2);
-    padding: 15px 15px 0 15px;
+    padding: 15px 15px 15px 15px;
 }
 
 .box-title {
     color: #885a2d;
     font-weight: normal;
-    font-size: 16px;
+    font-size: 20px;
 }
 
-.item-price {
-    margin-left: auto;
-}
+/* Items Container*/
 
-.name-container {
-    grid-area: name-container;
-    background-color: #EDE1D5;
+.items-container {
+    grid-area: items-container;
+    background-color: var(--container-bg-color);
     border-radius: 10px;
 }
 
@@ -122,6 +119,11 @@ body>main>form>ul>li {
         "quantity name price"
         "quantity attribute price";
     grid-template-columns: 1fr 4fr 1fr;
+
+}
+
+.item:last-child {
+    border-bottom: none;
 }
 
 .item-quantity {
@@ -130,50 +132,98 @@ body>main>form>ul>li {
 
 .item-name {
     grid-area: name;
+    font-weight: bold;
+    padding: 8px;
+
 }
 
 .item-price {
     grid-area: price;
+    margin-left: auto;
+    font-weight: bold;
+    padding: 8px;
+}
+
+.item-attributes-list {
+    list-style: none;
+    padding: 8px;
 }
 
 .item-attribute {
     grid-area: attribute;
+    color: #885a2d;
+    padding: 4px;
+}
+
+/* Name&Payment container layout*/
+
+
+.name-container {
+    grid-area: name-container;
+    background-color: var(--container-bg-color);
+    border-radius: 10px;
 }
 
 .payment-container {
     grid-area: payment-container;
-    background-color: #EDE1D5;
+    background-color: var(--container-bg-color);
     border-radius: 10px;
-
 }
 
 .input-group {
     position: relative;
     display: inline-block;
+    width: 100%;
 }
 
 .input {
     background-color: rgba(0, 0, 0, 0);
     border: 2px #885a2d solid;
-    padding: 8px;
+    padding: 20px;
     border-radius: 100px;
     width: 100%;
+    margin-bottom: 20px;
 }
 
+.half-width {
+    width: 50%;
+}
+
+
 .label {
-    background-color: #eee1d5;
+    background-color: var(--box-bg-color);
     color: #885a2d;
-    font-size: 11px;
+    font-size: 15px;
     position: absolute;
     left: 25px;
     top: -7px;
     padding: 0 2px;
 }
 
+/* Chechout container*/
+
 .checkout-container {
     grid-area: checkout-container;
     margin: 1vh 50vh 0 50vh;
     padding: 5px 0;
+
+
+}
+
+.checkout-container-item-text {
+    font-weight: normal;
+}
+
+.checkout-container-item-text:last-child {
+    font-weight: bold;
+}
+
+.checkout-container-item-text::after {
+    content: ":";
+}
+
+.checkout-container-item-quantity::before {
+    content: "$"
 }
 
 .checkout-container-item-text {
@@ -185,13 +235,15 @@ body>main>form>ul>li {
     text-align: right;
 }
 
-
+/* Place order buttom */
 .place-order {
     grid-area: place-order;
     background-color: #DEB993;
+    border: none;
     text-align: center;
-    border-radius: 4vh;
-    margin: 0 20%;
+    border-radius: 3vh;
+    margin: 0 10%;
     padding: 10px 0 10px 0;
-    height: 8vh;
+    height: 6vh;
+    font-size: 20px;
 }
