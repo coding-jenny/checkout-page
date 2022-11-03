@@ -205,7 +205,7 @@ body>main>form>ul>li {
 
 .checkout-container {
     grid-area: checkout-container;
-    margin: 1vh 50vh 0 50vh;
+    margin: 0 20%;
     padding: 5px 0;
 
 
@@ -252,4 +252,48 @@ body>main>form>ul>li {
     padding: 10px 0 10px 0;
     height: 6vh;
     font-size: 20px;
+}
+
+
+/* Small devices */
+@media screen and (max-width: 767px) {
+
+
+    body.checkout-page,
+    main.checkout-form {
+        display: block;
+    }
+
+    .flex-central {
+        display: flex;
+        justify-content: center;
+    }
+
+    .place-order {
+        padding: 10px;
+    }
+
+    .checkout-form .items-container,
+    .checkout-form .name-container,
+    .checkout-form .payment-container {
+        margin: 1rem;
+    }
+
+
+}
+
+/* Medium-Large devices */
+@media screen and (min-width: 768px) {
+    .mobile-only {
+        display: none;
+    }
+
+}
+
+/* Very Large Devices */
+@media screen and (min-width: 1400px) {
+    .checkout-form {
+        width: 80%;
+    }
+
 }
