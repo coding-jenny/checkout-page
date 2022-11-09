@@ -68,7 +68,7 @@ body {
     background-color: var(--black);
     color: var(--white);
     font-size: var(--font-size);
-    font-weight: var(--sans);
+
 }
 
 
@@ -99,7 +99,7 @@ a {
     text-align: center;
     padding: 5%;
     margin: 0 auto;
-    max-width: 600px;
+    max-width: 500px;
 
 
 }
@@ -111,7 +111,32 @@ a {
 
 /* Footer*/
 
-.
+footer {
+    margin: 0 auto;
+    width: 400px;
+
+}
+
+.footer-title {
+    font-family: var(--sans);
+    font-size: 3rem;
+    text-align: center;
+}
+
+footer ul {
+
+    list-style: none;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 5%;
+    font-size: 3rem;
+    font-family: var(--sans);
+
+}
+
 
 /* Small devices */
 @media screen and (max-width: 820px) {
