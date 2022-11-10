@@ -81,7 +81,8 @@ a {
 
 .intro-box {
     margin: 40px;
-    padding: 10px;
+    padding: 5% 10%;
+
 
 
 }
@@ -91,17 +92,80 @@ a {
     font-family: var(--mono);
 }
 
+/* Projects section*/
+
+h4 {
+    font-family: var(--mono);
+}
+
+h2,
+h3,
+p {
+    font-family: var(--sans);
+}
+
+.projects-div {
+    background-color: var(--dkblue);
+
+}
+
+.projects-box {
+    background-color: var(--black);
+    padding: 1%;
+    border-radius: 15px;
+}
+
+.projects {
+    padding: 2% 10%;
+    text-align: right;
+}
+
+.projects-h2 {
+    text-align: left;
+}
+
+.tecnologies-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: right;
+    gap: 2rem;
+    font-family: var(--mono);
+}
+
+article.reverse-article {
+    text-align: left;
+}
+
+.reverse-article ul {
+    justify-content: left;
+}
+
+
+/*Gradient*/
+
+.gradient {
+    background: linear-gradient(90deg, #ff17e4 0%, #86fbfb 100%);
+    height: 2px;
+}
+
 /*Contact box*/
+
+.contact-div {
+    background-color: var(--plum);
+}
 
 .contact-box {
     background-color: var(--plum);
     color: var(--white);
     text-align: center;
-    padding: 5%;
+    padding: 2%;
     margin: 0 auto;
     max-width: 500px;
-
-
 }
 
 .contact-email {
@@ -114,14 +178,16 @@ a {
 footer {
     margin: 0 auto;
     width: 400px;
+    text-align: center;
 
 }
 
 .footer-title {
     font-family: var(--sans);
-    font-size: 3rem;
-    text-align: center;
+    margin: 1rem;
+
 }
+
 
 footer ul {
 
@@ -131,11 +197,16 @@ footer ul {
     align-items: center;
     justify-content: center;
     gap: 2rem;
-    padding: 5%;
+    padding: 2%;
     font-size: 3rem;
     font-family: var(--sans);
+    margin: 1rem;
 
 }
+
+
+
+
 
 
 /* Small devices */
