@@ -40,6 +40,7 @@ nav {
     font-family: var(--mono);
     font-size: 90%;
     padding: 1rem;
+    margin: 40px;
 }
 
 nav h1 a {
@@ -145,6 +146,15 @@ article.reverse-article {
     justify-content: left;
 }
 
+img {
+    margin: 2rem 0 4rem 0;
+    padding: 1rem;
+    border-left: 1px solid var(--aqua);
+    border-top: 1px solid var(--aqua);
+    border-radius: 25px;
+    width: 100%;
+}
+
 
 /*Gradient*/
 
@@ -239,4 +249,25 @@ footer ul {
 
 }
 
-@media screen and (min-width:)
+@media screen and (min-width:800px) {
+    article {
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+    }
+
+    .projects img {
+        grid-column: 1/6;
+        grid-row: 1/2;
+    }
+
+    .projects-box {
+        grid-column: 5/11;
+        grid-row: 1/2;
+        order: 2;
+        text-align: right;
+    }
+
+    .tecnologies-list {
+        justify-content: flex-end;
+    }
+}
