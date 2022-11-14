@@ -105,7 +105,7 @@ p {
     font-family: var(--sans);
 }
 
-.projects-div {
+.blue-div {
     background-color: var(--dkblue);
 
 }
@@ -138,13 +138,9 @@ p {
     font-family: var(--mono);
 }
 
-article.reverse-article {
-    text-align: left;
-}
 
-.reverse-article ul {
-    justify-content: left;
-}
+
+
 
 img {
     margin: 2rem 0 4rem 0;
@@ -181,6 +177,20 @@ img {
 .contact-email {
     color: var(--magenta);
 
+}
+
+.button {
+    background-color: var(--magenta);
+    color: white;
+    padding: 0.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-family: var(--mono);
+}
+
+.button:hover {
+    color: white;
+    background-color: var(--hotmag);
 }
 
 /* Footer*/
@@ -260,7 +270,7 @@ footer ul {
         grid-row: 1/2;
     }
 
-    .projects-box {
+    .project {
         grid-column: 5/11;
         grid-row: 1/2;
         order: 2;
@@ -269,5 +279,23 @@ footer ul {
 
     .tecnologies-list {
         justify-content: flex-end;
+    }
+
+    /*Reverse article*/
+
+    .reverse-article .project {
+        grid-column: 1/7;
+        grid-row: 1/2;
+        order: 2;
+        text-align: left;
+    }
+
+    .reverse-article img {
+        grid-column: 6/11;
+        grid-row: 1/2;
+    }
+
+    .reverse-article .tecnologies-list {
+        justify-content: flex-start;
     }
 }
