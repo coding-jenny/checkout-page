@@ -52,6 +52,10 @@ nav [class*="fa-"] {
     color: var(--aqua);
 }
 
+nav [class*="fa-"]:hover {
+    color: var(--hotmag);
+}
+
 nav h1 [class*="fa-"] {
     font-size: 100%;
     color: var(--aqua);
@@ -78,6 +82,9 @@ a {
     color: var(--magenta);
 }
 
+a:hover {
+    color: var(--hotmag)
+}
 
 
 .intro-box {
@@ -148,7 +155,7 @@ img {
     border-left: 1px solid var(--aqua);
     border-top: 1px solid var(--aqua);
     border-radius: 25px;
-    width: 100%;
+    max-width: 100%;
 }
 
 
@@ -222,6 +229,13 @@ footer ul {
     font-family: var(--sans);
     margin: 1rem;
 
+}
+
+
+/*About page*/
+
+img.photo.photo {
+    width: 50%;
 }
 
 
