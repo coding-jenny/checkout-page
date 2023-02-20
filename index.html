@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="style.css">
+    </link>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet" />
+
+</head>
+
+<body class="checkout-page">
+
+    <header>
+        <img class="app-logo" src="img/cutecroissant.png" alt="a cute croissant, the bakery logo">
+        <h1 class="app-name">Bakery Delivery Service</h1>
+    </header>
+
+    <main class="checkout-form">
+
+        <form class="items-container box">
+            <h2 class="box-title">ITEMS</h2>
+            <ul class="items">
+                <li class="item">
+                    <div class="item-quantity">1x</div>
+                    <div class="item-name">Cappuccino</div>
+                    <div class="item-price">$3.35</div>
+                    <ul class="item-attributes-list">
+                        <li class="item-attribute">Lite Foam</li>
+                    </ul>
+                </li>
+                <li class="item">
+                    <div class="item-quantity">1x</div>
+                    <div class="item-name">Cappuccino</div>
+                    <div class="item-price">$3.85</div>
+                    <ul class="item-attributes-list">
+                        <li class="item-attribute">Lite Foam</li>
+                        <li class="item-attribute">Double espresso</li>
+                    </ul>
+                </li>
+                <li class="item">
+                    <div class="item-quantity">1x</div>
+                    <div class="item-name">Croissant</div>
+                    <div class="item-price">$2.45</div>
+                    <ul class="item-attributes-list">
+                        <li class="item-attribute">Butter</li>
+                    </ul>
+
+                </li>
+            </ul>
+        </form>
+
+        <div class="name-container box">
+            <h2 class="box-title">NAME</h2>
+            <div class="input-group">
+                <label for="name-for-order" class="name-for-order label">Name for order</label>
+                <input id="name-for-order" class="name-for-order input" type="text" placeholder="Ford Perfect" />
+            </div>
+        </div>
+        <div class="payment">
+            <div class="payment-container box">
+                <h2 class="box-title">PAYMENT</h2>
+                <div class="input-group">
+                    <label for="card-number" class="card-number label">Card number</label>
+                    <input id="card-number" class="card-number input" type="number" placeholder="1234 5678 9012 3456" />
+                </div>
+
+                <div class="input-group half-width">
+                    <label for="ccv-number" class="ccv-number label">CCV Number</label>
+                    <input type="number" class="ccv-number input" placeholder="001" maxlength="3" />
+                </div>
+            </div>
+        </div>
+        <table class="checkout-container">
+
+            <tr class="checkout-container-item">
+                <th scope="row" class="checkout-container-item-text">Subtotal</th>
+                <td class="checkout-container-item-quantity">9.65</td>
+            </tr>
+
+            <tr class="checkout-container-item">
+                <th scope="row" class="checkout-container-item-text">Tax</th>
+                <td class="checkout-container-item-quantity">0.82</td>
+            </tr>
+
+            <tr class="checkout-container-item">
+                <th scope="row" class="checkout-container-item-text bold-thtd">Total</th>
+                <td class="checkout-container-item-quantity bold-thtd">10.45</td>
+            </tr>
+
+        </table>
+
+
+
+
+        <div class="place-order">
+            <button class="place-order-button" type="button">Place order</button>
+        </div>
+    </main>
+
+    <div class="footer">
+        <footer>
+            <div class="social">
+                <h3>Stay connected!</h3>
+                <ul>
+                    <li><a href=""> <img src="img/facebook-icon.svg" alt="facebook-icon"></a></li>
+                    <li><a href=""><img src="img/instagram-icon.svg" alt="instagram-icon"></a></li>
+                </ul>
+            </div>
+            <address>
+                Wall of Wonders <br>
+                RBC Plaza <br>
+                60 South 6 <sup>th</sup> Street <br>
+                Minneapolis, MN 55402
+            </address>
+
+        </footer>
+    </div>
+</body>
+
+
+</html>
